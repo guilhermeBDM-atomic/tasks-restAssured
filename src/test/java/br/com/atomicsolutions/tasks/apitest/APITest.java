@@ -40,7 +40,7 @@ public class APITest {
 	public void naoDeveAdicionarTarefa()
 	{
 		RestAssured.given().
-		body("{\"task\": \"Teste via API\", \"dueDate\": \"2020-12-30\" }")
+		body("{\"task\": \"Teste via API\", \"dueDate\": \"2010-12-30\" }")
 		.contentType(ContentType.JSON)
 		.when().post("/todo")
 		.then().log().all().statusCode(400).
